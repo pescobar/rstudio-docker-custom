@@ -55,6 +55,6 @@ RUN apt-get update \
   && apt-get clean 
 
 RUN Rscript -e "source ('https://bioconductor.org/biocLite.R'); biocLite(c('bit64', 'blob', 'pkgconfig', 'DBI', 'memoise', 'BH', 'plogr'))" \
-    && Rscript -e "install.packages('https://cran.r-project.org/src/contrib/blob_1.1.0.tar.gz', repos=NULL)" \
-    && Rscript -e "install.packages('https://cran.r-project.org/src/contrib/RSQLite_2.0.tar.gz', repos=NULL)" \
+    && Rscript -e "install.packages('https://stat.ethz.ch/CRAN/src/contrib/blob_1.1.0.tar.gz', repos=NULL)" \
+    && Rscript -e "install.packages('https://stat.ethz.ch/CRAN/src/contrib/RSQLite_2.0.tar.gz', repos=NULL)" \
     && Rscript -e "source ('https://bioconductor.org/biocLite.R'); biocLite(c('affycoretools', 'oligoClasses', 'ggplot2', 'edgeR', 'DESeq2', 'goseq', 'GenomicFeatures', 'org.Mm.eg.db', 'org.Hs.eg.db', 'KEGG.db', 'pathview', 'pheatmap'))" 
